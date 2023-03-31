@@ -1,9 +1,9 @@
 FROM rust:1.67
 
-WORKDIR /usr/src/myapp
+WORKDIR /opt/hellorust
 COPY . .
 
 RUN cargo install --path .
 
-CMD ["myapp"]
+CMD ["target/release/hellorust"]
 
