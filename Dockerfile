@@ -1,4 +1,4 @@
-FROM gcr.io/distroless/cc:debug
+FROM gcr.io/distroless/cc
 
 COPY --from=release hellorust /hellorust
 
