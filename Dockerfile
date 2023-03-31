@@ -1,9 +1,8 @@
-FROM rust:1.67-alpine
+FROM gcr.io/distroless/static-debian11:debug
 
 WORKDIR /opt/hellorust
-COPY . .
 
-RUN cargo install --path .
+COPY target .
 
-CMD ["target/release/hellorust"]
+CMD ["/opt/hellorust/target/release/hellorust"]
 
