@@ -40,7 +40,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          context: .
+          build-contexts: release=.
           tags: ghcr.io/noss/rusthello:latest
           cache-from: type=registry,ref=ghcr.io/noss/rusthello:buildcache
           cache-to: type=registry,ref=ghcr.io/noss/rusthello:buildcache,mode=max
