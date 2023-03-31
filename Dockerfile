@@ -1,4 +1,4 @@
-FROM gcr.io/distroless/static-debian11:debug
+FROM gcr.io/distroless/cc:debug
 
 WORKDIR /opt/hellorust
 
