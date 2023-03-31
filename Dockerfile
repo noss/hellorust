@@ -1,8 +1,7 @@
 FROM gcr.io/distroless/cc:debug
 
-WORKDIR /opt/hellorust
 
-COPY --from=release ./release .
+COPY --from=release hellorust hellorust
 
-CMD ["/opt/hellorust/release/hellorust"]
+CMD ["./hellorust"]
 
