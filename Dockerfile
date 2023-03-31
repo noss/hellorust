@@ -2,7 +2,7 @@ FROM gcr.io/distroless/static-debian11:debug
 
 WORKDIR /opt/hellorust
 
-COPY release/hellorust .
+COPY ./release .
 
-CMD ["/opt/hellorust/hellorust"]
+CMD ["/opt/hellorust/release/hellorust"]
 
