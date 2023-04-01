@@ -1,0 +1,14 @@
+on: workflow_dispatch
+
+
+jobs:
+  deleter:
+    name: Delete untagged packages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/delete-package-versions@v4
+        with: 
+          package-name: 'rusthello'
+          package-type: 'container'
+          min-versions-to-keep: 2
+          delete-only-untagged-versions: 'true'
